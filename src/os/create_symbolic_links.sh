@@ -7,8 +7,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 create_symlinks() {
 
-    rm ~/.zshrc
-
     declare -a FILES_TO_SYMLINK=(
 
         "shell/aliases/bash_aliases"
