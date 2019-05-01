@@ -59,7 +59,3 @@ shopt -s no_empty_cmd_completion
 # filename expansion.
 
 shopt -s nocaseglob
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
-fi

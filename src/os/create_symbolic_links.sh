@@ -84,9 +84,6 @@ create_symlinks() {
 main() {
     print_in_purple "\n • Create symbolic links\n\n"
     create_symlinks "$@"
-    if [ ! -e /etc/profile.d/vte.sh ]; then
-        execute "sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh"
-    fi
 }
 
 main "$@"
