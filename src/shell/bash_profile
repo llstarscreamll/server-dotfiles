@@ -29,7 +29,7 @@ source_bash_files() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    for i in ${FILES_TO_SOURCE}; do
+    for i in ${FILES_TO_SOURCE[@]}; do
 
         file="$HOME/.${i}"
 
