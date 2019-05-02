@@ -31,7 +31,7 @@ if ! package_is_installed "postgresql-11"; then
 fi
 
 install_package "Postgresql" "postgresql-11"
-# execute "psql -c \"alter user postgres with password '$PASSWORD'\"" "set $PASSWORD password for default postgres user $PASSWORD"
-# execute "psql -c \"alter user $USER with password '$PASSWORD'\"" "set $PASSWORD password to $USER postgres user $PASSWORD"
+execute "psql -c \"alter user postgres with password '$PASSWORD'\"" "set $PASSWORD password for default postgres user $PASSWORD"
 execute "sudo -u postgres createuser $USER" "creating $USER postgres user"
+execute "psql -c \"alter user $USER with password '$PASSWORD'\"" "set $PASSWORD password to $USER postgres user $PASSWORD"
 execute "sudo -u postgres createdb $DATABASE -O $USER" "create $DATABASE database"
